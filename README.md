@@ -1,4 +1,4 @@
-# 🧠 Sentiment Analysis Platform
+# Sentiment Analysis Platform
 
 A modular, full-stack sentiment analysis application that demonstrates foundational and advanced NLP techniques. Built with a scalable backend, interactive React frontend, and integrated analytics logging, this project is designed for real-world deployment and resume impact.
 
@@ -63,3 +63,39 @@ source venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
+
+
+## 📊 Analytics & Logging
+
+- Logs model usage frequency
+- Tracks sentiment distribution over time
+- Captures emoji feedback for UI/UX insights
+
+
+## 🧠 Model Details
+
+| Model        | Description                                                 |
+| ------------ | ----------------------------------------------------------- | 
+| TF-IDF + SVM | Lightweight baseline using scikit-learn                     | 
+| LSTM         | Sequential model trained on IMDB dataset                    | 
+| Transformer  | Fine-tuned DistilBERT for robust sentiment detection        |
+
+
+
+## 📁 Folder Structure
+
+```
+sentimentAnalysis/
+├── backend/         # NestJS API with Prisma
+├── frontend/        # React UI
+├── ml-models/       # Python ML services
+├── prisma/          # DB schema and migrations
+└── README.md
+```
+
+## Future Enhancements
+- Add user authentication
+- Deploy via Docker Compose
+- Integrate real-time feedback loop for model retraining
+- Expand to multilingual sentiment analysis
+
