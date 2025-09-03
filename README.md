@@ -35,6 +35,7 @@ This platform allows users to input text and receive sentiment predictions using
 - Python (v3.8+)
 - PostgreSQL
 - Docker (optional for containerization)
+- **Must Download dataset `sentiment140` from [Kaggle dataset](https://www.kaggle.com/datasets/kazanova/sentiment140) and place the csv file in `backend\dataset\sentiment140.csv`**
 
 ### Backend Setup
 
