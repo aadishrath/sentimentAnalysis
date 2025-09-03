@@ -1,12 +1,12 @@
 from flask import Flask, request, jsonify
-from models.tfidf_svm import predict_svm
-from models.lstm import predict_lstm
-from models.transformer import predict_transformer
-from utils.preprocess import clean_text
-from utils.logger import log_input
+from backend.models.lstm.predict_lstm import predict_lstm
+from backend.models.tfidf_svm.predict_tfidf_svm import predict_svm
+from backend.models.transformer.predict_transformer import predict_transformer
+from backend.utils.logger import log_input
+from backend.utils.preprocess import clean_text
 from flask_cors import CORS
 import os
-from backend.config import *
+from .config import *
 
 def validate_model_paths():
     paths = [
@@ -58,7 +58,10 @@ def predict():
         "confidence": confidence
     })
 
+
 # Run the Flask server
 if __name__ == "__main__":
+    print('Validating file paths...')
     validate_model_paths()
+
     app.run(debug=True)
